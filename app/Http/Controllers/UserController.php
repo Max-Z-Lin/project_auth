@@ -112,7 +112,7 @@ class UserController extends Controller
         }
         return $data;
 
-        /*$validator = Validator::make($request->all(), [
+        $validator = Validator::make($request->all(), [
             'name' => 'string|max:255',
             'email' => 'string|email|max:255|unique:users',
             'password' => 'string|min:6|confirmed',
@@ -122,7 +122,7 @@ class UserController extends Controller
             return response()->json([
                 'error message' => $validator->errors(),
                 'error code' => 400]);
-        }*/
+        }
 
 
     }
